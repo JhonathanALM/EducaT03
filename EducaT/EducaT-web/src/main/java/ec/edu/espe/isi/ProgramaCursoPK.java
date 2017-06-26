@@ -8,31 +8,63 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * @author jhona
+ * Clase que albergara la informacion respecto a los cursos que se tendra dentro de un programa.
+ *
+ * @author Solange 
+ * @autor Jhonathan
+ * @autor Victoria
+ * @version 26/06/2017
+ *
  */
 @Embeddable 
 public class ProgramaCursoPK implements Serializable 
 {
 
+    /**
+     * propiedades de la entidad Capacitacion
+     */
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 8)
+    
+    /**
+     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
+     * al codigo del programa.
+     */
     @Column(name = "COD_PROGRAMA")
     private String codPrograma;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 8)
+    
+    /**
+     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
+     * al codigo unico de cada curso que se dara.
+     */
     @Column(name = "COD_CURSO")
     private String codCurso;
 
+    /**
+     * Constructor por defecto
+     *
+     */
     public ProgramaCursoPK() {
     }
 
+     /**
+     * Constructor para la clase ProgramaCurso
+     * @param codPrograma El parametor codPrograma dara el codigo unico del programa.
+     * @param codCurso El parametor codCurso dara el codigo unico del curso dentro del programa.
+     */
     public ProgramaCursoPK(String codPrograma, String codCurso) {
         this.codPrograma = codPrograma;
         this.codCurso = codCurso;
     }
 
+     /**
+     * Getters y Setters de cada atributo dentro de las clases
+     *
+     */
     public String getCodPrograma() {
         return codPrograma;
     }
@@ -49,6 +81,10 @@ public class ProgramaCursoPK implements Serializable
         this.codCurso = codCurso;
     }
 
+    /**
+     * Metodos @Override para comparaciones
+     * 
+     */
     @Override
     public int hashCode() {
         int hash = 0;

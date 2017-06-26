@@ -24,7 +24,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
- * @author jhona
+ * Clase que albergara la informacion respecto a la capacitaciones que tendremos dentro de nuestro instituto educativo.
+ *
+ * @author Solange 
+ * @autor Jhonathan
+ * @autor Victoria
+ * @version 26/06/2017
+ *
  */
 @Entity 
 @Table(name = "capacitacion")
@@ -38,30 +44,57 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Capacitacion.findByCapacidad", query = "SELECT c FROM Capacitacion c WHERE c.capacidad = :capacidad")})
 public class Capacitacion implements Serializable 
 {
-
+    /**
+     * propiedades de la entidad Capacitacion
+     */
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
+    
+    /**
+     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
+     * al codigo de identificacion de la capacitacion.
+     */
     @Column(name = "COD_CAPACITACION")
     private Integer codCapacitacion;
     @Basic(optional = false)
     @NotNull
+    
+    /**
+     * Propiedad de la entidad que hace referencia al atributo que corresponde
+     * a la fecha de inicio de la capacitacion.
+     */
     @Column(name = "FECHA_INICIO")
     @Temporal(TemporalType.DATE)
     private Date fechaInicio;
     @Basic(optional = false)
     @NotNull
+    
+    /**
+     * Propiedad de la entidad que hace referencia al atributo que corresponde
+     * a la fecha de fin de la capacitacion.
+     */
     @Column(name = "FECHA_FIN")
     @Temporal(TemporalType.DATE)
     private Date fechaFin;
     @Basic(optional = false)
     @NotNull
+    
+    /**
+     * Propiedad de la entidad que hace referencia al atributo que corresponde
+     * al estado de la capacitacion.
+     */
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO")
     private String estado;
     @Basic(optional = false)
     @NotNull
+    
+    /**
+     * Propiedad de la entidad que hace referencia al atributo que corresponde
+     * a la capacidad de inicio de la capacitacion.
+     */
     @Column(name = "CAPACIDAD")
     private short capacidad;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "capacitacion")
@@ -73,13 +106,30 @@ public class Capacitacion implements Serializable
     @ManyToOne
     private Docente codDocente;
 
+    /**
+     * Constructor por defecto
+     *
+     */
     public Capacitacion() {
     }
-
+    
+    /**
+     * Constructor para la clase Capacitacion
+     * @param codCapacitacion El parametor codCapacitacion define el codigo de la capacitacion.
+     *
+     */
     public Capacitacion(Integer codCapacitacion) {
         this.codCapacitacion = codCapacitacion;
     }
 
+    /**
+     * Constructor para la clase Capacitacion
+     * @param codCapacitacion El parametro codCapacitacion define el codigo de la capacitacion.
+     * @param fechaInicio define la fecha de inicio de la capacitacion.
+     * @param fechaFin define la fecha de fin de la capacitacion.
+     * @param estado define el estado en el que se encuentra la capacitacion.
+     * @param capacidad define la capacidad que tiene la capacitacion.
+     */
     public Capacitacion(Integer codCapacitacion, Date fechaInicio, Date fechaFin, String estado, short capacidad) {
         this.codCapacitacion = codCapacitacion;
         this.fechaInicio = fechaInicio;
@@ -88,6 +138,10 @@ public class Capacitacion implements Serializable
         this.capacidad = capacidad;
     }
 
+    /**
+     * Getters y Setters de cada atributo dentro de las clases
+     *
+     */
     public Integer getCodCapacitacion() {
         return codCapacitacion;
     }
@@ -153,6 +207,10 @@ public class Capacitacion implements Serializable
         this.codDocente = codDocente;
     }
 
+    /**
+     * Metodos Override para comparaciones
+     * 
+     */
     @Override
     public int hashCode() {
         int hash = 0;

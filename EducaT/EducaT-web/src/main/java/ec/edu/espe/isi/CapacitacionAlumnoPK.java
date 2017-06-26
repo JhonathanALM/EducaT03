@@ -8,30 +8,62 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * @author jhona
+ * Clase que albergara la informacion respecto a  la capacitacion que tiene una alumno.
+ *
+ * @author Solange 
+ * @autor Jhonathan
+ * @autor Victoria
+ * @version 26/06/2017
+ *
  */
 @Embeddable 
 public class CapacitacionAlumnoPK implements Serializable 
 {
 
+    /**
+     * propiedades de la entidad Capacitacion
+     */
     @Basic(optional = false)
     @NotNull
+    
+    /**
+     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
+     * al codigo de identificacion de la capacitacion.
+     */
     @Column(name = "COD_CAPACITACION")
     private int codCapacitacion;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 10)
+    
+    /**
+     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
+     * al codigo del alumno que tomara el programa.
+     */
     @Column(name = "COD_ALUMNO")
     private String codAlumno;
 
+    /**
+     * Constructor por defecto
+     *
+     */
     public CapacitacionAlumnoPK() {
     }
 
+    /**
+     * Constructor para la clase CapacitacionAlumnoPK
+     * @param codCapacitacion El parametor codCapacitacion define el codigo de la capacitacion.
+     * @param codAlumno El parametro codAlumno define el codigo del alumno dentro del programa.
+     */
     public CapacitacionAlumnoPK(int codCapacitacion, String codAlumno) {
         this.codCapacitacion = codCapacitacion;
         this.codAlumno = codAlumno;
     }
 
+    /**
+     * Getters y Setters de cada atributo dentro de las clases
+     *
+     */
     public int getCodCapacitacion() {
         return codCapacitacion;
     }
@@ -48,6 +80,10 @@ public class CapacitacionAlumnoPK implements Serializable
         this.codAlumno = codAlumno;
     }
 
+    /**
+     * Metodos @Override para comparaciones
+     * 
+     */
     @Override
     public int hashCode() {
         int hash = 0;
