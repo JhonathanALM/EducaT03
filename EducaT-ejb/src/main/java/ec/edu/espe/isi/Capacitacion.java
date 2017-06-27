@@ -29,13 +29,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity 
 @Table(name = "capacitacion")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Capacitacion.findAll", query = "SELECT c FROM Capacitacion c")
-    , @NamedQuery(name = "Capacitacion.findByCodCapacitacion", query = "SELECT c FROM Capacitacion c WHERE c.codCapacitacion = :codCapacitacion")
-    , @NamedQuery(name = "Capacitacion.findByFechaInicio", query = "SELECT c FROM Capacitacion c WHERE c.fechaInicio = :fechaInicio")
-    , @NamedQuery(name = "Capacitacion.findByFechaFin", query = "SELECT c FROM Capacitacion c WHERE c.fechaFin = :fechaFin")
-    , @NamedQuery(name = "Capacitacion.findByEstado", query = "SELECT c FROM Capacitacion c WHERE c.estado = :estado")
-    , @NamedQuery(name = "Capacitacion.findByCapacidad", query = "SELECT c FROM Capacitacion c WHERE c.capacidad = :capacidad")})
+
 public class Capacitacion implements Serializable 
 {
 
