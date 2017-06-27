@@ -19,7 +19,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity 
 @Table(name = "programa_curso")
-@XmlRootElement
 public class ProgramaCurso implements Serializable 
 {
 
