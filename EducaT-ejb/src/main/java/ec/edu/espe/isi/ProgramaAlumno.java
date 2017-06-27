@@ -20,11 +20,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity 
 @Table(name = "programa_alumno")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "ProgramaAlumno.findAll", query = "SELECT p FROM ProgramaAlumno p")
-    , @NamedQuery(name = "ProgramaAlumno.findByCodPrograma", query = "SELECT p FROM ProgramaAlumno p WHERE p.programaAlumnoPK.codPrograma = :codPrograma")
-    , @NamedQuery(name = "ProgramaAlumno.findByCodAlumno", query = "SELECT p FROM ProgramaAlumno p WHERE p.programaAlumnoPK.codAlumno = :codAlumno")
-    , @NamedQuery(name = "ProgramaAlumno.findByEstado", query = "SELECT p FROM ProgramaAlumno p WHERE p.estado = :estado")})
 public class ProgramaAlumno implements Serializable 
 {
 
