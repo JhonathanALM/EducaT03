@@ -25,15 +25,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity 
 @Table(name = "alumno")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Alumno.findAll", query = "SELECT a FROM Alumno a")
-    , @NamedQuery(name = "Alumno.findByCodAlumno", query = "SELECT a FROM Alumno a WHERE a.codAlumno = :codAlumno")
-    , @NamedQuery(name = "Alumno.findByNombre", query = "SELECT a FROM Alumno a WHERE a.nombre = :nombre")
-    , @NamedQuery(name = "Alumno.findByDireccion", query = "SELECT a FROM Alumno a WHERE a.direccion = :direccion")
-    , @NamedQuery(name = "Alumno.findByTelefono", query = "SELECT a FROM Alumno a WHERE a.telefono = :telefono")
-    , @NamedQuery(name = "Alumno.findByCorreoElectronico", query = "SELECT a FROM Alumno a WHERE a.correoElectronico = :correoElectronico")
-    , @NamedQuery(name = "Alumno.findByFechaNacimiento", query = "SELECT a FROM Alumno a WHERE a.fechaNacimiento = :fechaNacimiento")
-    , @NamedQuery(name = "Alumno.findByGenero", query = "SELECT a FROM Alumno a WHERE a.genero = :genero")})
+
 public class Alumno implements Serializable 
 {
 

@@ -25,14 +25,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity 
 @Table(name = "programa")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Programa.findAll", query = "SELECT p FROM Programa p")
-    , @NamedQuery(name = "Programa.findByCodPrograma", query = "SELECT p FROM Programa p WHERE p.codPrograma = :codPrograma")
-    , @NamedQuery(name = "Programa.findByNombre", query = "SELECT p FROM Programa p WHERE p.nombre = :nombre")
-    , @NamedQuery(name = "Programa.findByDescripcion", query = "SELECT p FROM Programa p WHERE p.descripcion = :descripcion")
-    , @NamedQuery(name = "Programa.findByDuracion", query = "SELECT p FROM Programa p WHERE p.duracion = :duracion")
-    , @NamedQuery(name = "Programa.findByFechaInicio", query = "SELECT p FROM Programa p WHERE p.fechaInicio = :fechaInicio")
-    , @NamedQuery(name = "Programa.findByFechaFin", query = "SELECT p FROM Programa p WHERE p.fechaFin = :fechaFin")})
+
 public class Programa implements Serializable 
 {
 
