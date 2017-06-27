@@ -1,4 +1,4 @@
-package ec.edu.espe.isi;
+package ec.edu.espe.isi.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

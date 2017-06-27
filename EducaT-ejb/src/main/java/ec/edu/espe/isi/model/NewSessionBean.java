@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.isi;
+package ec.edu.espe.isi.model;
 
 import javax.ejb.Stateless;
 import javax.ejb.LocalBean;
