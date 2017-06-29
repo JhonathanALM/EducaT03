@@ -1,4 +1,4 @@
-
+/* esta clase es la clase abstrac*/
 
 package ec.edu.espe.isi.dao;
 
