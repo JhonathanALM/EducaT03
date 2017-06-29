@@ -5,9 +5,7 @@ package ec.edu.espe.isi.dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 
-/**
- * @author jhona
- */
+
 public abstract class AbstractFacade<T> 
 {
 
