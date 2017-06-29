@@ -1,5 +1,7 @@
 /*ste es mi comentario de la clase abstracta */
 
+/* esta clase es la clase abstrac*/
+
 package ec.edu.espe.isi.dao;
 
 import java.util.List;
