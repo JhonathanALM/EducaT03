@@ -1,4 +1,4 @@
-
+/*ste es mi comentario de la clase abstracta */
 
 package ec.edu.espe.isi.dao;
 
