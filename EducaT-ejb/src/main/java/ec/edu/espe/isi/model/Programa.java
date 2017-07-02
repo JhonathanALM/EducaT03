@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlTransient;
 /**
  * Entidad que define un programa en el isntituto. Un programa esta dado por un conjunto de cursos.
  * @author Solange
- * @autor Victoria
+ * @author Victoria
  * @author jhona
  */
 @Entity 

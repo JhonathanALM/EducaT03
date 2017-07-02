@@ -11,8 +11,8 @@ import javax.validation.constraints.Size;
  * Clase que albergara la informacion respecto a  la capacitacion que tiene una alumno.
  *
  * @author Solange 
- * @autor Jhonathan
- * @autor Victoria
+ * @author Jhonathan
+ * @author Victoria
  * @version 26/06/2017
  *
  */

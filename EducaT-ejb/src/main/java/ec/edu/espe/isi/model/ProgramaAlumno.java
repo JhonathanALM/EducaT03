@@ -15,8 +15,8 @@ import javax.validation.constraints.Size;
  * Clase que albergara la informacion respecto a los programas que puede tomar cada alumno.
  *
  * @author Solange 
- * @autor Jhonathan
- * @autor Victoria
+ * @author Jhonathan
+ * @author Victoria
  * @version 26/06/2017
  *
  */

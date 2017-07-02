@@ -19,8 +19,8 @@ import javax.xml.bind.annotation.XmlTransient;
 /**
  * Clase que albergara la informacion respecto a los alumnos que toman clases en el instituto.
  * @author Solange 
- * @autor Jhonathan
- * @autor Victoria
+ * @author Jhonathan
+ * @author Victoria
  * @version 26/06/2017
  *
  */

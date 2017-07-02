@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * Entidad que almacena la informaciácion de los docentes 
  * que dictan capacitaciones en el instituto.
  * @author Solange
- * @autor Victoria
+ * @author Victoria
  * @author jhona
  */
 @Entity 

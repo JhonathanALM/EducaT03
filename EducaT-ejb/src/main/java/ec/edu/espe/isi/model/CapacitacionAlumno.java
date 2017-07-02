@@ -15,8 +15,8 @@ import javax.validation.constraints.Size;
  * Clase que albergara la informacion respecto a la capacitaciones que tendra cada alumnol alumno que tendremos dentro de nuestro instituto educativo.
  *
  * @author Solange 
- * @autor Jhonathan
- * @autor Victoria
+ * @author Jhonathan
+ * @author Victoria
  * @version 26/06/2017
  *
  */
