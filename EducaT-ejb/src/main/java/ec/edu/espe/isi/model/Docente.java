@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Solange
  * @author Victoria
  * @author jhona
+ * @version 02/07/2017
  */
 @Entity 
 @Table(name = "docente")
