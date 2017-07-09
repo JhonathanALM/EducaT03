@@ -7,7 +7,7 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <meta charset="utf-8"/>
-        <title>Listado de Alumnos</title>
+        <title>Listado de Docentes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" type="image/x-icon" href="img/icono.ico" />
         <meta name="description" content="" />
@@ -65,28 +65,22 @@
                 </div>
             </section>
             <div class="container">
-                <h1>Listado de Alumnos</h1>
-                <p:dataTable var ="alumno" value ="#{alumnoBean.alumnos}">
-                    <p:column  headerText="codAlumno">
-                        #{alumno.codAlumno}
+                <h1>Listado de Docentes</h1>
+                <p:dataTable var ="docente" value ="#{docenteBean.docentes}">
+                    <p:column  headerText="codDocente">
+                        #{docente.codDocente}
                     </p:column>
                     <p:column  headerText="Nombre">
-                        #{alumno.nombre}
+                        #{docente.nombre}
                     </p:column>
                     <p:column  headerText="Direccion">
-                        #{alumno.direccion}
+                        #{docente.direccion}
                     </p:column>
                     <p:column  headerText="Telefono">
-                        #{alumno.telefono}
+                        #{docente.telefono}
                     </p:column>
                     <p:column  headerText="Correo">
-                        #{alumno.correoElectronico}
-                    </p:column>
-                    <p:column  headerText="FechaNacimiento">
-                        #{alumno.fechaNacimiento}
-                    </p:column>
-                    <p:column  headerText="Genero">
-                        #{alumno.genero}
+                        #{docente.correoElectronico}
                     </p:column>
                 </p:dataTable>	
                 <br>            

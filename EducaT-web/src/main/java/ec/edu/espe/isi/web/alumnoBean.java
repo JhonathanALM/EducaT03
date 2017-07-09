@@ -12,7 +12,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class indexBean {
+public class alumnoBean {
     @EJB
     private AlumnoServices alumnoservice;
     private List<Alumno> alumnos;
@@ -20,10 +20,7 @@ public class indexBean {
     public void inicio() {
         this.alumnos = this.alumnoservice.obtenerAlumnos();
     }
-
     public List<Alumno> getAlumnos() {
-        
         return alumnos;
     }
-
 }
