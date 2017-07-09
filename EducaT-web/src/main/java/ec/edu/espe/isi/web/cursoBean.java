@@ -22,8 +22,9 @@
  * THE SOFTWARE.
  */
 package ec.edu.espe.isi.web;
-import ec.edu.espe.isi.model.Docente;
-import ec.edu.espe.isi.service.DocenteServices;
+
+import ec.edu.espe.isi.model.Curso;
+import ec.edu.espe.isi.service.CursoServices;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -31,7 +32,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 /**
- * Bean de docente
+ * Bean de curso
  *
  * @author Solange
  * @author Victoria
@@ -40,15 +41,18 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class docenteBean {
+public class cursoBean {
+
     @EJB
-    private DocenteServices docenteservice;
-    private List<Docente> docentes;
+    private CursoServices cursoservice;
+    private List<Curso> cursos;
+
     @PostConstruct
     public void inicio() {
-        this.docentes=this.docenteservice.obtenerDocentes();
+        this.cursos = this.cursoservice.obtenerCursos();
     }
-       public List<Docente> getDocentes() {
-        return docentes;
+
+    public List<Curso> getCursos() {
+        return cursos;
     }
 }
