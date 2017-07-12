@@ -33,8 +33,8 @@ import javax.persistence.PersistenceContext;
  * dentro del patron de diseño Facade..
  *
  * @author Solange 
- * @autor Jhonathan
- * @autor Victoria
+ * @author Jhonathan
+ * @author Victoria
  * @version 02/07/2017
  *
  */

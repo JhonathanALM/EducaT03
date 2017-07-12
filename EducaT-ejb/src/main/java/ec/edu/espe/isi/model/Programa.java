@@ -50,9 +50,6 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "programa")
 public class Programa implements Serializable 
 {
-     /**
-     * propiedades de la entidad Programa.
-     */
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -60,46 +57,34 @@ public class Programa implements Serializable
     @NotNull
     @Size(min = 1, max = 8)
     
-    /**
-     * Propiedad de la entidad Programa que corresponde al código del prógrama.
-     */
+
     @Column(name = "COD_PROGRAMA")
     private String codPrograma;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)
     
-    /**
-     * Propiedad de la entidad Programa que corresponde al nombre del programa.
-     */
+
     @Column(name = "NOMBRE")
     private String nombre;
     @Size(max = 4000)
     
-    /**
-     * Propiedad de la entidad Programa que corresponde a la descripción del programa.
-     */
+
     @Column(name = "DESCRIPCION")
     private String descripcion;
     @Basic(optional = false)
     @NotNull
     
-    /**
-     * Propiedad de la entidad Programa que corresponde a la duración en horas del programa
-     */
+
     @Column(name = "DURACION")
     private short duracion;
     
-    /**
-     * Propiedad de la entidad Programa que corresponde a la fecha de inicio del prorama.
-     */
+
     @Column(name = "FECHA_INICIO")
     @Temporal(TemporalType.DATE)
     private Date fechaInicio;
     
-    /**
-     * Propiedad de la entidad Programa que corresponde a la fecha de finalización del programa.
-     */
+
     @Column(name = "FECHA_FIN")
     @Temporal(TemporalType.DATE)
     private Date fechaFin;
@@ -111,118 +96,73 @@ public class Programa implements Serializable
     public Programa() {
     }
 
-    /**
-     * Constructor para la clase Programa.
-     * @param codPrograma define el código del programa.
-     */
+
     public Programa(String codPrograma) {
         this.codPrograma = codPrograma;
     }
 
-    /**
-     * Constructor para la clase Programa.
-     * @param codPrograma define el código del programa.
-     * @param nombre define el nombre del programa
-     * @param duracion define la duración del programa.
-     */
     public Programa(String codPrograma, String nombre, short duracion) {
         this.codPrograma = codPrograma;
         this.nombre = nombre;
         this.duracion = duracion;
     }
 
-    /**
-     * Método que devuelve el código del programa (codPrograma) 
-     * @return el código del programa.
-     */
+
     public String getCodPrograma() {
         return codPrograma;
     }
 
-    /**
-     * modifica el código del programa.
-     * @param codPrograma 
-     */
+
     public void setCodPrograma(String codPrograma) {
         this.codPrograma = codPrograma;
     }
 
-    /**
-     * Método que devuelve el nombre del programa (nombre) 
-     * @return el nombre del programa.
-     */
+ 
     public String getNombre() {
         return nombre;
     }
 
-    /**
-     * modifica el nombre del programa.
-     * @param nombre 
-     */
+ 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    /**
-     * Método que devuelve la descripción  del programa (descripcion) 
-     * @return la descripción  del programa.
-     */
+
     public String getDescripcion() {
         return descripcion;
     }
 
-    /**
-     * modifica la descripción del programa.
-     * @param descripcion 
-     */
+
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
-    /**
-     * Método que devuelve la duración  del programa (duracion) 
-     * @return la duración  del programa.
-     */
+
     public short getDuracion() {
         return duracion;
     }
 
-    /**
-     * modifica la duración del programa.
-     * @param duracion 
-     */
+
     public void setDuracion(short duracion) {
         this.duracion = duracion;
     }
 
-    /**
-     * Método que devuelve la fecha de inicio  del programa (fechaInicio) 
-     * @return la fecha de inicio del programa.
-     */
+
     public Date getFechaInicio() {
         return fechaInicio;
     }
 
-    /**
-     * modifica la fecha de inicio del programa.
-     * @param fechaInicio 
-     */
+
     public void setFechaInicio(Date fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    /**
-     * Método que devuelve la fecha de fin del programa (fechaFin) 
-     * @return la fecha de fin del programa.
-     */
+ 
     public Date getFechaFin() {
         return fechaFin;
     }
 
-    /**
-     * modifica la fecha de fin del programa.
-     * @param fechaFin 
-     */
+
     public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
     }

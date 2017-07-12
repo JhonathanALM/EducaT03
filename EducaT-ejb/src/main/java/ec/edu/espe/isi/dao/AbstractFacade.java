@@ -39,45 +39,28 @@ public abstract class AbstractFacade<T>
 
     private Class<T> entityClass;
 
-    /**
-     * Constructor de la clase AbstractFacade.
-     * @param entityClass 
-     */
+
     public AbstractFacade(Class<T> entityClass) {
         this.entityClass = entityClass;
     }
 
     protected abstract EntityManager getEntityManager();
 
-    /**
-     * metodo creador de administrador de entidades.
-     * @param entity 
-     */
+
     public void create(T entity) {
         getEntityManager().persist(entity);
     }
 
-    /**
-     * metodo que modifica el administrador de entidades.
-     * @param entity 
-     */
+
     public void edit(T entity) {
         getEntityManager().merge(entity);
     }
 
-    /**
-     * metodo para eliminar administrador de entidades.
-     * @param entity 
-     */
+
     public void remove(T entity) {
         getEntityManager().remove(getEntityManager().merge(entity));
     }
 
-    /**
-     * metodo consultor de id.
-     * @param id
-     * @return 
-     */
     public T find(Object id) {
         return getEntityManager().find(entityClass, id);
     }

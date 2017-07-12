@@ -41,8 +41,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Clase que albergara la informacion respecto a los cursos que se tendra dentro de un programa.
  *
  * @author Solange 
- * @autor Jhonathan
- * @autor Victoria
+ * @author Jhonathan
+ * @author Victoria
  * @version 02/07/2017
  *
  */
@@ -58,70 +58,44 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ProgramaCurso implements Serializable 
 {
 
-    /**
-     * propiedades de la entidad ProgramaCurso.
-     */
+
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected ProgramaCursoPK programaCursoPK;
     @Basic(optional = false)
     @NotNull
     
-    /**
-     * Propiedad de la entidad que hace referencia al atributo corresponde
-     * a la orden del programa.
-     */
+
     @Column(name = "ORDEN")
     private short orden;
     @Basic(optional = false)
     @NotNull
     
-    /**
-     * Propiedad de la entidad que hace referencia al atributo corresponde
-     * al estado del curso deltro del programa.
-     */
+  
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO")
     private String estado;
     
-    /**
-     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
-     * al codigo unico de cada curso que se dara.
-     */
+
     @JoinColumn(name = "COD_CURSO", referencedColumnName = "COD_CURSO", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Curso curso;
     
-    /**
-     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
-     * al codigo del programa.
-     */
+
     @JoinColumn(name = "COD_PROGRAMA", referencedColumnName = "COD_PROGRAMA", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Programa programa;
 
-    /**
-     * Constructor por defecto
-     *
-     */
+
     public ProgramaCurso() {
     }
 
-    /**
-     * Constructor para la clase ProgramaCurso
-     * @param programaCursoPK El parametor programaCursoPK es para definir la clave primaria.
-     *
-     */
+
     public ProgramaCurso(ProgramaCursoPK programaCursoPK) {
         this.programaCursoPK = programaCursoPK;
     }
 
-    /**
-     * Constructor para la clase ProgramaCurso
-     * @param programaCursoPK El parametor programaCursoPK es para definir la clave primaria.
-     * @param estado El parametro estado dara el estado del curso dentro del programa.
-     * @param orden El parametro orden nos dara como estare el curso dentro del programa.
-     */
+
     public ProgramaCurso(ProgramaCursoPK programaCursoPK, short orden, String estado) {
         this.programaCursoPK = programaCursoPK;
         this.orden = orden;
@@ -132,10 +106,7 @@ public class ProgramaCurso implements Serializable
         this.programaCursoPK = new ProgramaCursoPK(codPrograma, codCurso);
     }
 
-    /**
-     * Getters y Setters de cada atributo dentro de las clases
-     *
-     */
+
     public ProgramaCursoPK getProgramaCursoPK() {
         return programaCursoPK;
     }
@@ -176,10 +147,7 @@ public class ProgramaCurso implements Serializable
         this.programa = programa;
     }
 
-    /**
-     * Metodos @Override para comparaciones
-     * 
-     */
+
     @Override
     public int hashCode() {
         int hash = 0;

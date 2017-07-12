@@ -34,60 +34,41 @@ import javax.validation.constraints.Size;
  * Clase que albergara la informacion respecto a los programas que puede tomar cada alumno.
  *
  * @author Solange 
- * @autor Jhonathan
- * @autor Victoria
+ * @author Jhonathan
+ * @author Victoria
  * @version 02/07/2017
  *
  */
 @Embeddable 
 public class ProgramaAlumnoPK implements Serializable 
 {
-    /**
-     * propiedades de la entidad ProgramaAlumnoPK.
-     */
+
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 8)
     
-    /**
-     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
-     * al codigo del programa.
-     */
+
     @Column(name = "COD_PROGRAMA")
     private String codPrograma;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 10)
     
-    /**
-     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
-     * al codigo del alumno que tomara el programa.
-     */
+
     @Column(name = "COD_ALUMNO")
     private String codAlumno;
 
-    /**
-     * Constructor por defecto
-     *
-     */
+
     public ProgramaAlumnoPK() {
     }
 
-    /**
-     * Constructor para la clase ProgramaAlumnoPK
-     * @param codPrograma El parametro codPrograma define el codigo del programa.
-     * @param codAlumno El parametro codAlumno define el codigo del alumno dentro del programa.
-     *
-     */
+
     public ProgramaAlumnoPK(String codPrograma, String codAlumno) {
         this.codPrograma = codPrograma;
         this.codAlumno = codAlumno;
     }
 
-    /**
-     * Getters y Setters de cada atributo dentro de las clases
-     *
-     */
+
     public String getCodPrograma() {
         return codPrograma;
     }
@@ -104,10 +85,7 @@ public class ProgramaAlumnoPK implements Serializable
         this.codAlumno = codAlumno;
     }
 
-    /**
-     * Metodos @Override para comparaciones
-     * 
-     */
+ 
     @Override
     public int hashCode() {
         int hash = 0;

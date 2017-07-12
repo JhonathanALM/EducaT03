@@ -49,9 +49,7 @@ import javax.validation.constraints.Size;
 public class CapacitacionAlumno implements Serializable 
 {
 
-    /**
-     * propiedades de la entidad CapacitacionAlumno
-     */
+
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected CapacitacionAlumnoPK capacitacionAlumnoPK;
@@ -59,71 +57,43 @@ public class CapacitacionAlumno implements Serializable
     @Basic(optional = false)
     @NotNull
     
-    /**
-     * Propiedad de la entidad que hace referencia al atributo que corresponde
-     * a la nota final de la capacitacion que recibio el alumno.
-     */
+
     @Column(name = "NOTA_FINAL")
     private BigDecimal notaFinal;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)
     
-    /**
-     * Propiedad de la entidad que hace referencia al atributo que corresponde
-     * al estado de capacitacion que recibio el alumno.
-     */
+
     @Column(name = "ESTADO")
     private String estado;
     
-    /**
-     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
-     * al codigo de identificacion del alumno de la capacitacion recibida.
-     */
+
     @JoinColumn(name = "COD_ALUMNO", referencedColumnName = "COD_ALUMNO", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Alumno alumno;
     
-    /**
-     * Propiedad de la entidad que hace referencia a la clave primaria que corresponde
-     * al codigo de identificacion de la capacitacion recibida.
-     */
+
     @JoinColumn(name = "COD_CAPACITACION", referencedColumnName = "COD_CAPACITACION", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Capacitacion capacitacion;
 
-    /**
-     * Constructor por defecto
-     *
-     */
+
     public CapacitacionAlumno() {
     }
 
-    /**
-     * Constructor para la clase CapacitacionAlumno
-     * @param capacitacionAlumnoPK El parametor capacitacionAlumnoPK es para definir la clave primaria.
-     *
-     */
+
     public CapacitacionAlumno(CapacitacionAlumnoPK capacitacionAlumnoPK) {
         this.capacitacionAlumnoPK = capacitacionAlumnoPK;
     }
 
-    /**
-     * Constructor para la clase CapacitacionAlumno
-     * @param capacitacionAlumnoPK El parametro capacitacionAlumnoPK es para definir la clave primaria.
-     * @param notaFinal El parametro notaFinal dara la nota con la que el alumno termino el curso.
-     * @param estado El parametro estado dara el estado de la capacitacion.
-     */
+
     public CapacitacionAlumno(CapacitacionAlumnoPK capacitacionAlumnoPK, BigDecimal notaFinal, String estado) {
         this.capacitacionAlumnoPK = capacitacionAlumnoPK;
         this.notaFinal = notaFinal;
         this.estado = estado;
     }
 
-    /**
-     * Getters y Setters de cada atributo dentro de las clases
-     *
-     */
     public CapacitacionAlumno(int codCapacitacion, String codAlumno) {
         this.capacitacionAlumnoPK = new CapacitacionAlumnoPK(codCapacitacion, codAlumno);
     }
