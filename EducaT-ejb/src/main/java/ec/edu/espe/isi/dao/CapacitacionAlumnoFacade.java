@@ -36,7 +36,7 @@ import javax.persistence.PersistenceContext;
  * de diseño Facade.
  * @author Solange
  * @author Victoria
- * @author jhona
+ * @author Jhonathan
  * @version 02/07/2017
  */
 @Stateless

@@ -31,7 +31,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 /**
- * Clase de servicio Docente
+ * Clase de servicio Docente.
  *
  * @author Solange
  * @author Victoria

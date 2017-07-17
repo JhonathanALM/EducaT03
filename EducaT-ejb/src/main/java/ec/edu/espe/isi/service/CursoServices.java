@@ -31,7 +31,7 @@ import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 /**
- * Clase de servicio Curso
+ * Clase de servicio Curso.
  *
  * @author Solange
  * @author Victoria

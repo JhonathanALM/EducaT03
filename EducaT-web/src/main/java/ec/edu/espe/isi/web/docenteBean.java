@@ -31,7 +31,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 /**
- * Bean de docente
+ * Bean de docente.
  *
  * @author Solange
  * @author Victoria

@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * Entidad que registra información referente a cada curso que oferta el instituto.
  * @author Solange
  * @author Victoria
- * @author jhona
+ * @author Jhonathan
  */
 @Entity 
 @Table(name = "curso")

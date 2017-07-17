@@ -32,7 +32,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 /**
- * Bean de curso
+ * Bean de curso.
  *
  * @author Solange
  * @author Victoria
