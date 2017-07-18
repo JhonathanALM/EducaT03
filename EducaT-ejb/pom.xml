@@ -5,7 +5,7 @@
     <artifactId>EducaT</artifactId>
     <groupId>ec.edu.espe.isi</groupId>
     <version>1</version>
-    <relativePath>../pom.xml</relativePath>
+    <relativePath>../</relativePath>
   </parent>
 
     <groupId>ec.edu.espe.isi</groupId>
