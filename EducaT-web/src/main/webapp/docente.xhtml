@@ -4,7 +4,8 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
     <h:head>
         <meta charset="utf-8"/>
         <title>Listado de Docentes</title>
@@ -75,6 +76,9 @@
                     <p:column  headerText="Correo">
                         #{docente.correoElectronico}
                     </p:column>
+                     <f:facet name="footer">
+                        En total existen #{fn:length(docenteBean.docentes)} Docentes.
+                    </f:facet>          
                 </p:dataTable>	
                 <br>            
                 </br>
